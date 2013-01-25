@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="UTF-8"?><EntityModelCatalog>
+
+<dbInfo name="Contacts" uuid="DEB2380315EE8E47AF7052ECFC4FADBC"/>
+
+<extraProperties ____objectunic="true" version="1">
+
+	<model ____objectunic="true"/>
+
+	<classes ____objectunic="true">
+
+		<Company ____objectunic="true" panelColor="#548DD4">
+
+			<panel ____objectunic="true" isOpen="true" pathVisible="true">
+
+				<position ____objectunic="true" X="349" Y="23"/>
+</panel>
+</Company>
+
+		<Employee ____objectunic="true" panelColor="#B7DDE8">
+
+			<panel ____objectunic="true" isOpen="true" pathVisible="true">
+
+				<position ____objectunic="true" X="25" Y="20"/>
+</panel>
+</Employee>
+</classes>
+</extraProperties>
+
+<dataClasses name="Company" className="Company" collectionName="CompanyCollection" scope="public" uuid="055EF9EA07A44C0EAB2C7770ACE49BE6">
+
+	<extraProperties ____objectunic="true" panelColor="#548DD4">
+
+		<panel ____objectunic="true" isOpen="true" pathVisible="true">
+
+			<position ____objectunic="true" X="349" Y="23"/>
+</panel>
+</extraProperties>
+
+	<attributes name="ID" kind="storage" scope="public" uuid="F54743313F7046A7A2AF662E432E9316" unique="true" autosequence="true" type="long" primKey="true"/>
+
+	<attributes name="name" kind="storage" scope="public" uuid="AEA0E5A822D94A91B8F20CC0781CF19E" type="string"/>
+
+	<attributes name="allEmployees" kind="relatedEntities" scope="public" type="EmployeeCollection" reversePath="true" path="company"/>
+
+</dataClasses>
+
+<dataClasses name="Employee" className="Employee" collectionName="EmployeeCollection" scope="public" uuid="904F41B2FC2E44B0947AA49BAC059F4B">
+
+	<extraProperties ____objectunic="true" panelColor="#B7DDE8">
+
+		<panel ____objectunic="true" isOpen="true" pathVisible="true">
+
+			<position ____objectunic="true" X="25" Y="20"/>
+</panel>
+</extraProperties>
+
+	<attributes name="ID" kind="storage" scope="public" uuid="1795319E13A9415693143F7154FAF56B" unique="true" autosequence="true" type="long" primKey="true"/>
+
+	<attributes name="firstName" kind="storage" scope="public" uuid="404935F5C5BA4F1994972F5C349F60CE" type="string"/>
+
+	<attributes name="lastName" kind="storage" scope="public" uuid="C3AD887FB8784124ACAE08DEE63133D4" type="string"/>
+
+	<attributes name="salary" kind="storage" scope="public" uuid="122A23141B0848ECA01748E766491B95" type="number"/>
+
+	<attributes name="company" kind="relatedEntity" scope="public" uuid="9E565ACBAB9745139696FE58C419E711" type="Company" path="Company"/>
+
+	<methods name="convertAll" applyTo="dataClass" scope="public" from="guidedModel.Employee.methods.convertAll"/>
+
+</dataClasses>
+</EntityModelCatalog>

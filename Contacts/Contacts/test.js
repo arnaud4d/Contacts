@@ -1,0 +1,2 @@
+﻿process.version;
+process.buildNumber;
